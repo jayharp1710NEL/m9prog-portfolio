@@ -1,0 +1,87 @@
+@use "variables" as *;
+
+// Projectgrid
+.project-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	gap: 1.5rem;
+}
+
+.project-card {
+	background: $surface;
+	border: 1px solid $border;
+	border-radius: $radius;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	transition: transform 0.15s ease, border-color 0.15s ease;
+
+	&:hover {
+		transform: translateY(-4px);
+		border-color: $accent;
+	}
+
+	&__thumb {
+		aspect-ratio: 16 / 10;
+		background: $surface-2;
+
+		&--1 { background: linear-gradient(135deg, #ff6a3d, #ff3d77); }
+		&--2 { background: linear-gradient(135deg, #3d8bff, #22d3ee); }
+		&--3 { background: linear-gradient(135deg, #a855f7, #ffd166); }
+	}
+
+	&__body { padding: 1.25rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
+	&__title { font-size: 1.2rem; margin: 0; }
+	&__desc { color: $muted; font-size: 0.95rem; margin: 0; flex: 1; }
+	&__link { font-family: $font-head; font-weight: 600; font-size: 0.92rem; }
+}
+
+// Tags
+.tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.4rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.tag {
+	font-size: 0.72rem;
+	font-family: $font-head;
+	letter-spacing: 0.03em;
+	color: $accent;
+	background: $accent-soft;
+	border: 1px solid rgba(255, 106, 61, 0.25);
+	padding: 0.2em 0.6em;
+	border-radius: 999px;
+}
+
+// Skills
+.skills {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+	list-style: none;
+	margin: 1.5rem 0 0;
+	padding: 0;
+
+	li {
+		background: $surface-2;
+		border: 1px solid $border;
+		border-radius: $radius-sm;
+		padding: 0.5em 0.9em;
+		font-size: 0.9rem;
+		font-family: $font-head;
+	}
+}
+
+// Generieke kaart (index/archief)
+.post-list { display: grid; gap: 1.25rem; }
+.card {
+	background: $surface;
+	border: 1px solid $border;
+	border-radius: $radius;
+	padding: 1.4rem 1.5rem;
+
+	&__title { margin: 0 0 0.5rem; font-size: 1.3rem; }
+}

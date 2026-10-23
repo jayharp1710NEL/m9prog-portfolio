@@ -1,0 +1,19 @@
+# Secrets / lokale omgeving
+.env
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# WordPress runtime-content (niet versiebeheren)
+uploads/*
+!uploads/.gitkeep
+plugins/*
+!plugins/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/

@@ -1,0 +1,109 @@
+@use "variables" as *;
+
+// Header
+.site-header {
+	position: sticky;
+	top: 0;
+	z-index: 50;
+	background: rgba(14, 16, 22, 0.82);
+	backdrop-filter: blur(10px);
+	border-bottom: 1px solid $border;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 64px;
+	}
+}
+
+.brand {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.55rem;
+	color: $text;
+	font-family: $font-head;
+	font-weight: 700;
+
+	&__mark {
+		color: $accent;
+		font-size: 1.1rem;
+	}
+	&:hover { color: $text; }
+}
+
+.site-nav__list {
+	display: flex;
+	gap: 1.5rem;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	a {
+		color: $muted;
+		font-size: 0.95rem;
+		&:hover { color: $text; }
+	}
+}
+
+// Secties
+.section {
+	padding: 84px 0;
+
+	&--alt { background: $surface; border-block: 1px solid $border; }
+	&--center { text-align: center; }
+
+	&__head { margin-bottom: 2.5rem; }
+	&__title { font-size: clamp(1.6rem, 3.5vw, 2.3rem); }
+}
+
+// Hero
+.hero {
+	padding: 110px 0 90px;
+	background:
+		radial-gradient(900px 400px at 80% -10%, $accent-soft, transparent 70%),
+		$bg;
+
+	&__title {
+		font-size: clamp(2.1rem, 6vw, 3.6rem);
+		letter-spacing: -0.02em;
+		margin-bottom: 0.4em;
+	}
+	&__lead {
+		max-width: 640px;
+		color: $muted;
+		font-size: 1.1rem;
+	}
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.9rem;
+		margin-top: 1.8rem;
+	}
+}
+
+// Footer
+.site-footer {
+	border-top: 1px solid $border;
+	background: $surface;
+	padding: 36px 0;
+
+	&__inner {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		align-items: center;
+		justify-content: space-between;
+	}
+	&__copy { margin: 0; color: $muted; font-size: 0.9rem; }
+	&__links {
+		display: flex;
+		gap: 1.25rem;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		font-size: 0.9rem;
+	}
+}
+
+.page-title { font-size: clamp(1.8rem, 4vw, 2.6rem); }

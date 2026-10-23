@@ -1,0 +1,13 @@
+{
+  "name": "jay-portfolio",
+  "version": "1.0.0",
+  "description": "Custom WordPress portfoliotheme, gebouwd met SASS.",
+  "private": true,
+  "scripts": {
+    "build": "sass src/scss/main.scss assets/css/main.css --style=compressed --no-source-map",
+    "watch": "sass --watch src/scss/main.scss assets/css/main.css --style=expanded"
+  },
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}

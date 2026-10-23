@@ -1,0 +1,101 @@
+@use "variables" as *;
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+	margin: 0;
+	background: $bg;
+	color: $text;
+	font-family: $font-body;
+	font-size: 17px;
+	line-height: 1.65;
+	-webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+	font-family: $font-head;
+	line-height: 1.15;
+	margin: 0 0 0.5em;
+	font-weight: 600;
+}
+
+p { margin: 0 0 1em; }
+
+a {
+	color: $accent;
+	text-decoration: none;
+	transition: color 0.15s ease;
+	&:hover { color: $accent-2; }
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+.container {
+	width: 100%;
+	max-width: $maxw;
+	margin-inline: auto;
+	padding-inline: 20px;
+
+	&--narrow { max-width: $maxw-narrow; }
+}
+
+.eyebrow {
+	font-family: $font-head;
+	text-transform: uppercase;
+	letter-spacing: 0.14em;
+	font-size: 0.8rem;
+	color: $accent;
+	margin: 0 0 0.75rem;
+}
+
+.accent { color: $accent; }
+
+// Knoppen
+.btn {
+	display: inline-block;
+	font-family: $font-head;
+	font-weight: 600;
+	font-size: 0.98rem;
+	padding: 0.8em 1.4em;
+	border-radius: $radius-sm;
+	border: 1px solid transparent;
+	cursor: pointer;
+	transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease;
+
+	&:hover { transform: translateY(-2px); }
+
+	&--primary {
+		background: $accent;
+		color: #11131a;
+		&:hover { background: $accent-2; color: #11131a; }
+	}
+
+	&--ghost {
+		border-color: $border;
+		color: $text;
+		&:hover { border-color: $accent; color: $accent; }
+	}
+}
+
+// Toegankelijkheid
+.skip-link {
+	position: absolute;
+	left: -9999px;
+	top: 0;
+	background: $accent;
+	color: #11131a;
+	padding: 0.6em 1em;
+	z-index: 100;
+	&:focus { left: 8px; top: 8px; }
+}
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px; height: 1px;
+	overflow: hidden;
+	clip: rect(1px, 1px, 1px, 1px);
+}

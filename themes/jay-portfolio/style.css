@@ -1,0 +1,16 @@
+/*
+Theme Name: Jay – Developer Portfolio
+Theme URI: https://github.com/jayharp1710NEL/m9prog-portfolio
+Author: Jayden Harper
+Author URI: https://www.youtube.com/@bigjtg
+Description: Custom portfoliotheme voor een webdevelopment-stage. Donker, modern en snel, met een hero en projectkaarten. Gebouwd met PHP, SASS en NPM.
+Version: 1.0.0
+Requires at least: 6.0
+Tested up to: 6.6
+Requires PHP: 8.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: jay-portfolio
+*/
+
+/* De opgemaakte stijlen staan in assets/css/main.css (gecompileerd uit SASS). */
