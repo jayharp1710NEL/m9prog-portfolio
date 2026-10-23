@@ -85,3 +85,26 @@
 
 	&__title { margin: 0 0 0.5rem; font-size: 1.3rem; }
 }
+
+// Statusbadge in de hero
+.status-badge {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-family: $font-head;
+	font-size: 0.82rem;
+	color: $text;
+	background: $surface-2;
+	border: 1px solid $border;
+	border-radius: 999px;
+	padding: 0.35em 0.8em;
+	margin: 0 0 1rem;
+
+	&__dot {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: #35d07f;
+		box-shadow: 0 0 0 3px rgba(53, 208, 127, 0.2);
+	}
+}

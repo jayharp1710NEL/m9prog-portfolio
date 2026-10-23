@@ -38,6 +38,7 @@ $projects = array(
 
 <section class="hero">
 	<div class="container hero__inner">
+		<p class="status-badge"><span class="status-badge__dot"></span> Beschikbaar voor stage</p>
 		<p class="eyebrow">Webdeveloper &middot; stagiair</p>
 		<h1 class="hero__title">Hoi, ik ben <span class="accent"><?php bloginfo( 'name' ); ?></span>.<br>Ik bouw snelle web-apps en games.</h1>
 		<p class="hero__lead">Op zoek naar een stageplek webdevelopment. Ik werk met HTML, CSS/SASS, JavaScript, PHP en WordPress — en ik lever graag iets af dat echt werkt.</p>

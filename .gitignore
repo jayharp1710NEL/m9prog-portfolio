@@ -17,3 +17,18 @@ plugins/*
 Thumbs.db
 desktop.ini
 .vscode/
+
+# lokale WP-admin notitie
+_wp-admin.txt
+_les1_up.*
+
+# Lokale helper- en dumpbestanden (niet versiebeheren)
+_*.bat
+_*.log
+_*.txt
+*.sql
+portfolio_db.zip
+
+# WordPress-standaardthema's en core-bestanden (horen bij de container, niet in de repo)
+themes/twentytwenty*/
+themes/index.php
