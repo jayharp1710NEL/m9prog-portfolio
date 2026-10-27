@@ -1,0 +1,21 @@
+// Les 5 – eigen Bootstrap-overrides.
+// Deze variabelen worden VÓÓR Bootstrap geladen, zodat Bootstrap ze gebruikt.
+
+// Kleuren
+$primary:    #ff6a3d; // koraal accent wordt Bootstrap "primary"
+$body-bg:    #0e1016; // donkere basis
+$body-color: #e7eaf0;
+$dark:       #161922;
+
+// Links
+$link-color:       #ff6a3d;
+$link-hover-color: #ffd166;
+
+// Typografie
+$font-family-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+$headings-font-family:   'Space Grotesk', system-ui, sans-serif;
+$headings-font-weight:   600;
+
+// Spacing
+$spacer:       1.1rem;
+$border-radius: 0.875rem;

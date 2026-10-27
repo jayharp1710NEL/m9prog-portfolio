@@ -1,13 +1,23 @@
 {
   "name": "jay-portfolio",
   "version": "1.0.0",
-  "description": "Custom WordPress portfoliotheme, gebouwd met SASS.",
+  "description": "Custom WordPress portfoliotheme, gebouwd met Webpack, Bootstrap en SASS.",
   "private": true,
   "scripts": {
-    "build": "sass src/scss/main.scss assets/css/main.css --style=compressed --no-source-map",
-    "watch": "sass --watch src/scss/main.scss assets/css/main.css --style=expanded"
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
   },
   "devDependencies": {
-    "sass": "^1.106.1"
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.2",
+    "sass": "^1.80.6",
+    "sass-loader": "^16.0.3",
+    "webpack": "^5.97.1",
+    "webpack-cli": "^5.1.4"
   }
 }

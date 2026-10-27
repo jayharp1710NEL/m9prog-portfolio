@@ -42,24 +42,24 @@ function jayportfolio_assets() {
 		null
 	);
 
-	// Gecompileerde SASS.
-	$main_css = get_theme_file_path( 'assets/css/main.css' );
+	// Gecompileerde CSS uit de Webpack-build (Bootstrap + eigen Sass).
+	$main_css = get_theme_file_path( 'dist/css/main.css' );
 	$version  = file_exists( $main_css ) ? filemtime( $main_css ) : '1.0.0';
 
 	wp_enqueue_style(
 		'jayportfolio-main',
-		get_theme_file_uri( 'assets/css/main.css' ),
+		get_theme_file_uri( 'dist/css/main.css' ),
 		array( 'jayportfolio-fonts' ),
 		$version
 	);
 
-	// Front-end script (in de footer geladen).
-	$main_js    = get_theme_file_path( 'assets/js/main.js' );
+	// Gecompileerde JS uit de Webpack-build (incl. Bootstrap), in de footer geladen.
+	$main_js    = get_theme_file_path( 'dist/js/main.js' );
 	$js_version = file_exists( $main_js ) ? filemtime( $main_js ) : '1.0.0';
 
 	wp_enqueue_script(
 		'jayportfolio-main',
-		get_theme_file_uri( 'assets/js/main.js' ),
+		get_theme_file_uri( 'dist/js/main.js' ),
 		array(),
 		$js_version,
 		true

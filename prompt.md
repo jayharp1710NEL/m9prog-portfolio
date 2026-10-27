@@ -49,3 +49,29 @@ Bouw gedeelde templates en haal WordPress-content dynamisch op met de Loop:
   `the_post_thumbnail( 'large' )`.
 - `index.php`: overzicht-Loop toont thumbnail (`the_post_thumbnail( 'medium' )`) per bericht.
 - Nieuwe SASS: `.page-thumb` en `.card__thumb` → gecompileerd naar `assets/css/main.css`.
+
+---
+
+# prompt.md – Les 5
+
+## Prompt
+Zet een reproduceerbare front-end build op met Webpack dat Bootstrap en eigen Sass compileert:
+- `package.json` met dev- en build-scripts; Webpack voor JS en Sass.
+- Importeer Bootstrap via Sass en overschrijf ten minste kleuren, spacing of typografie
+  met eigen variabelen.
+- Enqueue alleen de gecompileerde bestanden (`dist/`) vanuit het theme.
+- Controleer met een productie-build dat de site zonder ontwikkelserver werkt.
+- Zorg dat (bijvoorbeeld) de achtergrond er anders uit ziet.
+
+## Output
+- `package.json` omgezet naar Webpack (`dev` = watch, `build` = productie); deps: `webpack`,
+  `webpack-cli`, `sass`, `sass-loader`, `css-loader`, `mini-css-extract-plugin`,
+  `copy-webpack-plugin`, `bootstrap`, `@popperjs/core`.
+- `webpack.config.js`: entry `src/js/main.js` → `dist/js/main.js`; Sass → `dist/css/main.css`
+  (MiniCssExtractPlugin); images/fonts gekopieerd naar `dist/`.
+- `src/`-structuur: `js/`, `scss/`, `images/`, `fonts/`.
+- `src/scss/main.scss`: eerst `_bootstrap-overrides` (eigen variabelen), dan Bootstrap, dan eigen stijlen.
+- `_bootstrap-overrides.scss`: overschrijft kleuren (`$primary` = #ff6a3d), typografie
+  (`$font-family-sans-serif`, `$headings-font-family`) én spacing (`$spacer`).
+- Nieuwe achtergrond: gelaagde radial-gradient op `body`.
+- `functions.php`: enqueue nu `dist/css/main.css` en `dist/js/main.js`; oude `assets/` verwijderd.
