@@ -6,6 +6,9 @@
  */
 
 get_header();
+
+// Les 3 – testkop: toont welk template-bestand WordPress heeft gekozen.
+echo '<p class="template-flag">index.php</p>';
 ?>
 <section class="section">
 	<div class="container">

@@ -7,6 +7,9 @@
 
 get_header();
 
+// Les 3 – testkop: toont welk template-bestand WordPress heeft gekozen.
+echo '<p class="template-flag">front-page.php</p>';
+
 /*
  * Projectkaarten. Pas deze gerust aan: titel, beschrijving, tags en link.
  * Minimaal drie kaarten (eis van de opdracht).

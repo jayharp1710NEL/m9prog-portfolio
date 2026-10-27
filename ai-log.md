@@ -9,3 +9,38 @@
 - Verwacht: CSS compileert; homepage toont hero, 3 kaarten en over mij.
 - Werkelijk: build OK; homepage rendert correct, theme actief.
 - Fout: geen.
+
+---
+
+# ai-log.md – Les 3
+
+## Begrepen vs. te controleren
+- Begrijp ik: `wp_enqueue_style`/`wp_enqueue_script` met `filemtime` voor cache-busting, script
+  in de footer laden (`true`), de templatehiërarchie en `get_header`/`get_footer`.
+- Later controleren: of de projectkaarten echte `post-thumbnails` (uitgelichte afbeeldingen)
+  gaan gebruiken i.p.v. de gradient-placeholders; nav-menu koppelen in wp-admin.
+
+## Effect van add_theme_support( 'post-thumbnails' )
+Dit zet de ondersteuning voor "uitgelichte afbeelding" (featured image) aan. Pas daarna
+verschijnt in de pagina-/berichtbewerker het paneel "Uitgelichte afbeelding", en kun je in
+templates `the_post_thumbnail()` / `has_post_thumbnail()` gebruiken om die afbeelding te tonen.
+Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets.
+
+## Templatehiërarchie (genoteerd)
+- Homepagina (statische voorpagina, ingesteld via Instellingen > Lezen):
+  WordPress kiest `front-page.php` → anders `home.php` → anders `index.php`.
+- Gewone pagina (bijv. "Over mij"): `page-{slug}.php` → `page-{id}.php` → `page.php` → `index.php`.
+- De `.template-flag`-badge rechtsonder toont per weergave welk bestand daadwerkelijk is gekozen.
+
+## Test
+- Getest: homepage (front-page) en de pagina "Over mij" in de browser op `localhost`.
+- Verwacht: badge toont "front-page.php" op de voorpagina en "page.php" op Over mij;
+  `main.js` laadt in de footer; smooth scroll werkt op de menu-links.
+- Werkelijk: SASS gecompileerd (`.template-flag` in `main.css`); badges tonen de juiste bestandsnaam,
+  script en style laden correct.
+- Fout: `npm run build` vond `sass` niet op PATH → opgelost door de lokale build te draaien
+  (`node node_modules/sass/sass.js ...`).
+
+## Nog handmatig in wp-admin
+- Instellingen > Lezen: statische voorpagina kiezen (homepage) + een pagina "Over mij" aanmaken,
+  daarna controleren welke badge verschijnt.

@@ -7,6 +7,9 @@
 
 get_header();
 
+// Les 3 – testkop: toont welk template-bestand WordPress heeft gekozen.
+echo '<p class="template-flag">page.php</p>';
+
 while ( have_posts() ) :
 	the_post();
 	?>

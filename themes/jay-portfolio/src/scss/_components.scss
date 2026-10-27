@@ -86,6 +86,28 @@
 	&__title { margin: 0 0 0.5rem; font-size: 1.3rem; }
 }
 
+// Template-vlag (les 3): laat zien welk template-bestand WordPress koos.
+.template-flag {
+	position: fixed;
+	bottom: 1rem;
+	right: 1rem;
+	z-index: 999;
+	font-family: $font-head;
+	font-size: 0.72rem;
+	letter-spacing: 0.03em;
+	color: $bg;
+	background: $accent-2;
+	border-radius: 999px;
+	padding: 0.4em 0.9em;
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+	pointer-events: none;
+
+	&::before {
+		content: "Template: ";
+		opacity: 0.7;
+	}
+}
+
 // Statusbadge in de hero
 .status-badge {
 	display: inline-flex;
