@@ -86,6 +86,32 @@
 	&__title { margin: 0 0 0.5rem; font-size: 1.3rem; }
 }
 
+// Uitgelichte afbeelding (les 4): featured image in de Loop.
+.page-thumb {
+	margin: 1.5rem 0;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: $radius;
+		border: 1px solid $border;
+	}
+}
+
+.card__thumb {
+	display: block;
+	margin-bottom: 1rem;
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		border-radius: $radius-sm;
+		border: 1px solid $border;
+	}
+}
+
 // Template-vlag (les 3): laat zien welk template-bestand WordPress koos.
 .template-flag {
 	position: fixed;

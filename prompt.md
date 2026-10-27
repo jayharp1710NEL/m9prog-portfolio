@@ -31,3 +31,21 @@ Breid het actieve theme `jay-portfolio` uit volgens de WordPress-templatehiërar
 - Nieuw `assets/js/main.js`: dependency-vrije smooth-scroll voor in-page ankers.
 - Nieuwe SASS-component `.template-flag` (vaste badge rechtsonder) → gecompileerd naar `assets/css/main.css`.
 - Zichtbare testkop in `front-page.php`, `page.php` en `index.php` die de bestandsnaam toont.
+
+---
+
+# prompt.md – Les 4
+
+## Prompt
+Bouw gedeelde templates en haal WordPress-content dynamisch op met de Loop:
+- `header.php` met `wp_head()`, `body_class()` en navigatie; `footer.php` met `wp_footer()` en
+  contact-/copyrightinfo; gebruik `get_header()`/`get_footer()` in de templates.
+- Bouw een Loop die titel, uitgelichte afbeelding én content van WordPress toont.
+- Maak minimaal twee pagina's in WordPress en controleer dat hun inhoud dynamisch verschijnt.
+
+## Output
+- `header.php`/`footer.php` voldeden al (wp_head, body_class, nav, wp_footer, contact/copyright).
+- `page.php`: Loop toont nu ook de uitgelichte afbeelding via `has_post_thumbnail()` +
+  `the_post_thumbnail( 'large' )`.
+- `index.php`: overzicht-Loop toont thumbnail (`the_post_thumbnail( 'medium' )`) per bericht.
+- Nieuwe SASS: `.page-thumb` en `.card__thumb` → gecompileerd naar `assets/css/main.css`.

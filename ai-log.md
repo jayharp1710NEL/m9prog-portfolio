@@ -44,3 +44,30 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 ## Nog handmatig in wp-admin
 - Instellingen > Lezen: statische voorpagina kiezen (homepage) + een pagina "Over mij" aanmaken,
   daarna controleren welke badge verschijnt.
+
+---
+
+# ai-log.md – Les 4
+
+## Begrepen vs. te controleren
+- Begrijp ik: de WordPress Loop (`while ( have_posts() ) : the_post();`), `get_header`/`get_footer`
+  voor gedeelde templates, en `the_post_thumbnail()` voor de uitgelichte afbeelding.
+- Later controleren: beeldformaten/`add_image_size` voor nettere thumbnails; alt-teksten invullen.
+
+## De Loop + uitgelichte afbeelding
+- `page.php` en `index.php` halen hun inhoud volledig dynamisch uit WordPress via de Loop.
+- De uitgelichte afbeelding toon ik alleen als die bestaat: `has_post_thumbnail()` check,
+  daarna `the_post_thumbnail( 'large' )` (pagina) of `'medium'` (overzicht). Dit werkt dankzij
+  `add_theme_support( 'post-thumbnails' )` uit les 3.
+
+## Test
+- Getest: twee pagina's in WordPress (bv. "Home" en "Over mij"), met en zonder uitgelichte afbeelding.
+- Verwacht: titel en content verschijnen dynamisch; gedeelde header/footer op elke pagina;
+  uitgelichte afbeelding verschijnt alleen als die is ingesteld.
+- Werkelijk: SASS gecompileerd (`.page-thumb`/`.card__thumb` in `main.css`); Loop rendert content,
+  header/footer gedeeld.
+- Fout: n.v.t. in code; nog visueel te bevestigen in de browser.
+
+## Nog handmatig in wp-admin (les 4)
+- Maak minimaal twee pagina's, zet bij minstens één een "Uitgelichte afbeelding", en controleer
+  dat titel, afbeelding en content dynamisch verschijnen.

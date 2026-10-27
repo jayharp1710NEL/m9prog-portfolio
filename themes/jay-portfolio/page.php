@@ -16,6 +16,13 @@ while ( have_posts() ) :
 	<article <?php post_class( 'section' ); ?>>
 		<div class="container container--narrow">
 			<h1 class="page-title"><?php the_title(); ?></h1>
+
+			<?php if ( has_post_thumbnail() ) : ?>
+				<figure class="page-thumb">
+					<?php the_post_thumbnail( 'large' ); ?>
+				</figure>
+			<?php endif; ?>
+
 			<div class="page-content"><?php the_content(); ?></div>
 		</div>
 	</article>
