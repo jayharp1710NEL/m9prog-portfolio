@@ -151,9 +151,10 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 - Hero, projectkaart en navigatie zijn nu losse, herbruikbare template-parts.
 
 ## Feedback van medestudent (verwerkt verbeterpunt)
-- Verbeterpunt: op mobiel was er geen bruikbaar menu (links liepen in de verdrukking).
-- Verwerkt: mobile-first **hamburger-navigatie** toegevoegd met toegankelijke toggle (`aria-expanded`).
-- [In te vullen door Jayden: naam medestudent + exacte feedback die zij gaven.]
+- Medestudent: **Zakaria**.
+- Feedbackpunt: op mobiel was er geen bruikbaar menu (de navigatielinks liepen in de verdrukking).
+- Verwerkt: mobile-first **hamburger-navigatie** toegevoegd met toegankelijke toggle (`aria-expanded`),
+  zodat het menu op kleine schermen netjes uitklapt.
 
 ## Test
 - Getest: layout op mobiel, tablet en desktop (responsive preview) en het hamburger-menu.
