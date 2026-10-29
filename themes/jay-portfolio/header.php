@@ -23,26 +23,7 @@
 			<span class="brand__name"><?php bloginfo( 'name' ); ?></span>
 		</a>
 
-		<nav class="site-nav" aria-label="<?php esc_attr_e( 'Hoofdmenu', 'jay-portfolio' ); ?>">
-			<?php
-			if ( has_nav_menu( 'primary' ) ) {
-				wp_nav_menu(
-					array(
-						'theme_location' => 'primary',
-						'container'      => false,
-						'menu_class'     => 'site-nav__list',
-						'depth'          => 1,
-					)
-				);
-			} else {
-				echo '<ul class="site-nav__list">';
-				echo '<li><a href="#projecten">Projecten</a></li>';
-				echo '<li><a href="#over">Over mij</a></li>';
-				echo '<li><a href="#contact">Contact</a></li>';
-				echo '</ul>';
-			}
-			?>
-		</nav>
+		<?php get_template_part( 'template-parts/navigation' ); ?>
 	</div>
 </header>
 

@@ -40,7 +40,7 @@ function jayportfolio_assets() {
 	// Google Fonts.
 	wp_enqueue_style(
 		'jayportfolio-fonts',
-		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap',
+		'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@500;600;700&display=swap',
 		array(),
 		null
 	);

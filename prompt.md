@@ -98,3 +98,24 @@ Eigen veilige implementatie in het theme (geen plugin), zodat het echt eigen wer
   `aria-describedby`, foutsamenvatting met `role="alert"`, succesmelding met `role="status"`.
 - Privacyvriendelijk: e-mailadres via `antispambot()` versleuteld; geen telefoon/adres gepubliceerd.
 - SCSS `.contact-form` (dark-theme velden) + JS die focus op de foutmelding zet → gecompileerd naar `dist/`.
+
+---
+
+# prompt.md – Les 7
+
+## Prompt
+Vertaal het ontwerp naar een responsive portfolio met eigen typografie en kleuren:
+- Pagina-opbouw voor home, over mij, projecten en contact; eigen kleuren, ≥1 webfont, consistente spacing in Sass.
+- Mobile-first bouwen en controleren op mobiel, tablet en desktop.
+- Hero, projectkaarten en navigatie als herbruikbare onderdelen.
+- Verander minimaal 3 kleuren en 1 font zodat het design herkenbaar eigen is.
+- Vraag feedback aan een medestudent en verwerk minstens één verbeterpunt.
+
+## Output
+- Nieuw palet (cyaan/violet): `$accent` #22d3ee, `$accent-2` #a855f7, `$bg` #0b0f17, plus surfaces/borders —
+  ook doorgezet in de Bootstrap-overrides (`$primary`/links) en de gradient-achtergrond.
+- Nieuw kop-font **Sora** (via Google Fonts + `$font-head`/Bootstrap `$headings-font-family`).
+- Spacing-schaal `$space-1…$space-6` en breakpoints `$bp-tablet`/`$bp-desktop` in `_variables.scss`.
+- Herbruikbare onderdelen: `template-parts/hero.php`, `template-parts/project-card.php`
+  (met `$args` via `get_template_part`), `template-parts/navigation.php`.
+- Mobile-first navigatie met toegankelijke hamburger-toggle (`aria-expanded`, JS open/dicht).

@@ -1,22 +1,35 @@
 // Design tokens
 
-// Kleuren
-$bg:          #0e1016;
-$surface:     #161922;
-$surface-2:   #1d212c;
-$border:      #272c38;
-$text:        #e7eaf0;
-$muted:       #99a1b3;
-$accent:      #ff6a3d;
-$accent-2:    #ffd166;
-$accent-soft: rgba(255, 106, 61, 0.12);
+// Kleuren (les 7: eigen palet – cyaan/violet neon-dev)
+$bg:          #0b0f17;
+$surface:     #141a24;
+$surface-2:   #1b2230;
+$border:      #283042;
+$text:        #e6edf5;
+$muted:       #94a1b8;
+$accent:      #22d3ee; // cyaan
+$accent-2:    #a855f7; // violet
+$accent-soft: rgba(34, 211, 238, 0.12);
+$ink:         #07131a; // donkere tekst op accent-knoppen
 
-// Typografie
-$font-head: 'Space Grotesk', system-ui, sans-serif;
+// Typografie (les 7: nieuw kop-font Sora)
+$font-head: 'Sora', system-ui, sans-serif;
 $font-body: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+
+// Spacing-schaal (les 7: consistente spacing)
+$space-1: 0.5rem;
+$space-2: 1rem;
+$space-3: 1.5rem;
+$space-4: 2.5rem;
+$space-5: 4rem;
+$space-6: 5.5rem;
 
 // Maatvoering
 $radius:    14px;
 $radius-sm: 10px;
 $maxw:      1080px;
 $maxw-narrow: 720px;
+
+// Breakpoints (mobile-first)
+$bp-tablet:  600px;
+$bp-desktop: 900px;

@@ -25,9 +25,9 @@
 		aspect-ratio: 16 / 10;
 		background: $surface-2;
 
-		&--1 { background: linear-gradient(135deg, #ff6a3d, #ff3d77); }
-		&--2 { background: linear-gradient(135deg, #3d8bff, #22d3ee); }
-		&--3 { background: linear-gradient(135deg, #a855f7, #ffd166); }
+		&--1 { background: linear-gradient(135deg, #22d3ee, #6366f1); }
+		&--2 { background: linear-gradient(135deg, #a855f7, #ec4899); }
+		&--3 { background: linear-gradient(135deg, #0ea5e9, #a855f7); }
 	}
 
 	&__body { padding: 1.25rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }

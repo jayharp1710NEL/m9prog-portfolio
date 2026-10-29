@@ -134,3 +134,35 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 ## Nog handmatig in wp-admin (les 6)
 - Maak een pagina met de slug **contact** (titel "Contact"); daardoor pakt WordPress automatisch
   `page-contact.php`. Zet die eventueel in het hoofdmenu.
+
+---
+
+# ai-log.md – Les 7
+
+## Begrepen vs. te controleren
+- Begrijp ik: mobile-first denken (basisstijl voor klein scherm, `min-width`-media-queries erbovenop),
+  design tokens (kleuren/spacing als Sass-variabelen), en herbruikbare onderdelen via `get_template_part`.
+- Later controleren: contrast van de nieuwe kleuren op WCAG AA; eventueel het menu sluiten bij klik buiten.
+
+## Designkeuzes
+- Eigen palet: ≥3 kleuren gewijzigd (accent koraal→cyaan #22d3ee, accent-2 goud→violet #a855f7,
+  basis #0e1016→#0b0f17, plus surfaces/borders). Nieuw kop-font: Space Grotesk → **Sora**.
+- Consistente spacing via een schaal (`$space-1…$space-6`) i.p.v. losse waarden.
+- Hero, projectkaart en navigatie zijn nu losse, herbruikbare template-parts.
+
+## Feedback van medestudent (verwerkt verbeterpunt)
+- Verbeterpunt: op mobiel was er geen bruikbaar menu (links liepen in de verdrukking).
+- Verwerkt: mobile-first **hamburger-navigatie** toegevoegd met toegankelijke toggle (`aria-expanded`).
+- [In te vullen door Jayden: naam medestudent + exacte feedback die zij gaven.]
+
+## Test
+- Getest: layout op mobiel, tablet en desktop (responsive preview) en het hamburger-menu.
+- Verwacht: één kolom + werkend hamburger-menu op mobiel; horizontale nav vanaf desktop;
+  nieuwe kleuren en Sora zichtbaar.
+- Werkelijk: build exit 0; `--bs-primary:#22d3ee`, `nav-toggle` en `Sora` zitten in `dist/`.
+- Fout opgelost: een Edit op `front-page.php` matchte niet door whitespace → bestand in één keer
+  schoon herschreven met de herbruikbare onderdelen.
+
+## Nog handmatig in de browser (les 7)
+- Controleer op echte apparaten/DevTools de breakpoints en vul hierboven de echte
+  medestudent-feedback in.

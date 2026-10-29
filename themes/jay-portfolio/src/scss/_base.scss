@@ -8,10 +8,10 @@ html { scroll-behavior: smooth; }
 
 body {
 	margin: 0;
-	// Les 5 – nieuwe achtergrond: gelaagde gradient i.p.v. een platte kleur.
+	// Les 5/7 – gelaagde gradient-achtergrond in het eigen palet (cyaan/violet).
 	background:
-		radial-gradient(1200px 600px at 100% -10%, rgba(255, 106, 61, 0.10), transparent 60%),
-		radial-gradient(900px 500px at -10% 8%, rgba(61, 139, 255, 0.08), transparent 55%),
+		radial-gradient(1200px 600px at 100% -10%, rgba(34, 211, 238, 0.10), transparent 60%),
+		radial-gradient(900px 500px at -10% 8%, rgba(168, 85, 247, 0.10), transparent 55%),
 		$bg;
 	background-attachment: fixed;
 	color: $text;
@@ -75,8 +75,8 @@ img { max-width: 100%; height: auto; display: block; }
 
 	&--primary {
 		background: $accent;
-		color: #11131a;
-		&:hover { background: $accent-2; color: #11131a; }
+		color: $ink;
+		&:hover { background: $accent-2; color: #fff; }
 	}
 
 	&--ghost {
@@ -92,7 +92,7 @@ img { max-width: 100%; height: auto; display: block; }
 	left: -9999px;
 	top: 0;
 	background: $accent;
-	color: #11131a;
+	color: $ink;
 	padding: 0.6em 1em;
 	z-index: 100;
 	&:focus { left: 8px; top: 8px; }

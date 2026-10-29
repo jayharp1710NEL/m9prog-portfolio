@@ -1,19 +1,19 @@
 // Les 5 – eigen Bootstrap-overrides.
 // Deze variabelen worden VÓÓR Bootstrap geladen, zodat Bootstrap ze gebruikt.
 
-// Kleuren
-$primary:    #ff6a3d; // koraal accent wordt Bootstrap "primary"
-$body-bg:    #0e1016; // donkere basis
-$body-color: #e7eaf0;
-$dark:       #161922;
+// Kleuren (les 7: cyaan/violet)
+$primary:    #22d3ee; // cyaan accent wordt Bootstrap "primary"
+$body-bg:    #0b0f17; // donkere basis
+$body-color: #e6edf5;
+$dark:       #141a24;
 
 // Links
-$link-color:       #ff6a3d;
-$link-hover-color: #ffd166;
+$link-color:       #22d3ee;
+$link-hover-color: #a855f7;
 
-// Typografie
+// Typografie (les 7: nieuw kop-font Sora)
 $font-family-sans-serif: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
-$headings-font-family:   'Space Grotesk', system-ui, sans-serif;
+$headings-font-family:   'Sora', system-ui, sans-serif;
 $headings-font-weight:   600;
 
 // Spacing

@@ -5,11 +5,12 @@
 	position: sticky;
 	top: 0;
 	z-index: 50;
-	background: rgba(14, 16, 22, 0.82);
+	background: rgba(11, 15, 23, 0.82);
 	backdrop-filter: blur(10px);
 	border-bottom: 1px solid $border;
 
 	&__inner {
+		position: relative; // Ankerpunt voor het uitklapbare mobiele menu.
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
@@ -32,17 +33,79 @@
 	&:hover { color: $text; }
 }
 
-.site-nav__list {
-	display: flex;
-	gap: 1.5rem;
-	list-style: none;
-	margin: 0;
-	padding: 0;
+// Hamburger-knop (les 7, mobile-first: zichtbaar op mobiel, verborgen op desktop).
+.nav-toggle {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	background: transparent;
+	border: 1px solid $border;
+	border-radius: $radius-sm;
+	cursor: pointer;
 
-	a {
-		color: $muted;
-		font-size: 0.95rem;
-		&:hover { color: $text; }
+	&__bars,
+	&__bars::before,
+	&__bars::after {
+		content: "";
+		display: block;
+		width: 20px;
+		height: 2px;
+		background: $text;
+		transition: transform 0.2s ease, opacity 0.2s ease;
+	}
+	&__bars { position: relative; }
+	&__bars::before { position: absolute; top: -6px; left: 0; }
+	&__bars::after { position: absolute; top: 6px; left: 0; }
+
+	&[aria-expanded="true"] &__bars { background: transparent; }
+	&[aria-expanded="true"] &__bars::before { transform: translateY(6px) rotate(45deg); }
+	&[aria-expanded="true"] &__bars::after { transform: translateY(-6px) rotate(-45deg); }
+
+	@media (min-width: $bp-desktop) { display: none; }
+}
+
+// Navigatie (les 7, mobile-first: uitklapbaar paneel onder de header).
+.site-nav {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	display: none;
+	background: $surface;
+	border-bottom: 1px solid $border;
+	padding: $space-2 20px;
+
+	&.is-open { display: block; }
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		gap: $space-2;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		a {
+			color: $muted;
+			font-size: 1rem;
+			&:hover { color: $text; }
+		}
+	}
+
+	// Tablet/desktop: horizontale balk, geen hamburger nodig.
+	@media (min-width: $bp-desktop) {
+		position: static;
+		display: block;
+		background: transparent;
+		border: 0;
+		padding: 0;
+
+		.site-nav__list {
+			flex-direction: row;
+			gap: $space-3;
+		}
 	}
 }
 

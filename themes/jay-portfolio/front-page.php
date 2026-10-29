@@ -37,20 +37,10 @@ $projects = array(
 		'thumb' => 3,
 	),
 );
-?>
 
-<section class="hero">
-	<div class="container hero__inner">
-		<p class="status-badge"><span class="status-badge__dot"></span> Beschikbaar voor stage</p>
-		<p class="eyebrow">Webdeveloper &middot; stagiair</p>
-		<h1 class="hero__title">Hoi, ik ben <span class="accent"><?php bloginfo( 'name' ); ?></span>.<br>Ik bouw snelle web-apps en games.</h1>
-		<p class="hero__lead">Op zoek naar een stageplek webdevelopment. Ik werk met HTML, CSS/SASS, JavaScript, PHP en WordPress — en ik lever graag iets af dat echt werkt.</p>
-		<div class="hero__actions">
-			<a class="btn btn--primary" href="#projecten">Bekijk mijn werk</a>
-			<a class="btn btn--ghost" href="#contact">Neem contact op</a>
-		</div>
-	</div>
-</section>
+// Herbruikbaar onderdeel: hero.
+get_template_part( 'template-parts/hero' );
+?>
 
 <section class="section" id="projecten">
 	<div class="container">
@@ -61,19 +51,7 @@ $projects = array(
 
 		<div class="project-grid">
 			<?php foreach ( $projects as $project ) : ?>
-				<article class="project-card">
-					<div class="project-card__thumb project-card__thumb--<?php echo (int) $project['thumb']; ?>" aria-hidden="true"></div>
-					<div class="project-card__body">
-						<ul class="tags">
-							<?php foreach ( $project['tags'] as $tag ) : ?>
-								<li class="tag"><?php echo esc_html( $tag ); ?></li>
-							<?php endforeach; ?>
-						</ul>
-						<h3 class="project-card__title"><?php echo esc_html( $project['title'] ); ?></h3>
-						<p class="project-card__desc"><?php echo esc_html( $project['desc'] ); ?></p>
-						<a class="project-card__link" href="<?php echo esc_url( $project['link'] ); ?>">Bekijk project <span aria-hidden="true">&rarr;</span></a>
-					</div>
-				</article>
+				<?php get_template_part( 'template-parts/project-card', null, $project ); ?>
 			<?php endforeach; ?>
 		</div>
 	</div>
