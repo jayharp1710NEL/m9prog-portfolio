@@ -86,6 +86,15 @@
 	&__title { margin: 0 0 0.5rem; font-size: 1.3rem; }
 }
 
+// 'Over mij'-paneel (les 7-feedback): inhoud in een accent-kaart.
+.about-panel {
+	background: $surface;
+	border: 1px solid $border;
+	border-left: 4px solid $accent;
+	border-radius: $radius;
+	padding: $space-4;
+}
+
 // Contactformulier (les 6): Bootstrap-velden passend gemaakt voor het dark-theme.
 .contact-form {
 	max-width: 560px;

@@ -76,7 +76,14 @@ img { max-width: 100%; height: auto; display: block; }
 	&--primary {
 		background: $accent;
 		color: $ink;
-		&:hover { background: $accent-2; color: #fff; }
+		font-weight: 700;
+		// Les 7-feedback: CTA's opvallender met een subtiele gloed.
+		box-shadow: 0 6px 20px rgba(34, 211, 238, 0.35);
+		&:hover {
+			background: $accent-2;
+			color: #fff;
+			box-shadow: 0 10px 28px rgba(168, 85, 247, 0.45);
+		}
 	}
 
 	&--ghost {

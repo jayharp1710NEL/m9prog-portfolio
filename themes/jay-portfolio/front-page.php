@@ -16,24 +16,24 @@ echo '<p class="template-flag">front-page.php</p>';
  */
 $projects = array(
 	array(
-		'title' => 'ViralMind AI',
-		'desc'  => 'Webtool die contentmakers helpt met ideeën, scripts en thumbnails. Front-end, API-koppeling en gebruikersaccounts.',
-		'tags'  => array( 'JavaScript', 'API', 'SaaS' ),
-		'link'  => '#',
+		'title' => 'Kalender-app',
+		'desc'  => 'Een overzichtelijke agenda-/kalenderapplicatie om afspraken en taken te plannen en te beheren.',
+		'tags'  => array( 'JavaScript', 'UI', 'App' ),
+		'link'  => 'https://github.com/jayharp1710NEL/kalender',
 		'thumb' => 1,
 	),
 	array(
-		'title' => 'Browsergame (Peggle-stijl)',
-		'desc'  => 'Zelfstandige single-file HTML5-game met physics op canvas. Volledig in de browser, zonder dependencies.',
-		'tags'  => array( 'HTML5 Canvas', 'JavaScript', 'Game' ),
-		'link'  => '#',
+		'title' => 'Social media-app',
+		'desc'  => 'Een social-media-applicatie waarin gebruikers berichten plaatsen en met elkaar in contact komen.',
+		'tags'  => array( 'JavaScript', 'Front-end', 'App' ),
+		'link'  => 'https://github.com/jayharp1710NEL/socialmedia',
 		'thumb' => 2,
 	),
 	array(
-		'title' => 'Portfolio van mini-apps',
-		'desc'  => 'Verzameling kleine, self-contained web-apps en experimenten. Focus op snelle, toegankelijke interfaces.',
-		'tags'  => array( 'HTML', 'CSS', 'UI' ),
-		'link'  => '#',
+		'title' => 'Meer op GitHub',
+		'desc'  => 'Nieuwsgierig naar de rest? Bekijk al mijn projecten, experimenten en code op mijn GitHub-profiel.',
+		'tags'  => array( 'Open source', 'Code' ),
+		'link'  => 'https://github.com/jayharp1710NEL',
 		'thumb' => 3,
 	),
 );
@@ -63,14 +63,16 @@ get_template_part( 'template-parts/hero' );
 			<p class="eyebrow">Over mij</p>
 			<h2 class="section__title">Developer met een maker-mentaliteit</h2>
 		</header>
-		<p>Ik bouw al jaren eigen projecten — van browsergames tot AI-tools voor contentmakers. Daardoor ben ik gewend om zelf uit te zoeken hoe iets werkt en het af te maken. Voor mijn stage wil ik dat omzetten in professioneel teamwerk: nette code, versiebeheer met Git en werken in een Docker-omgeving.</p>
-		<ul class="skills">
-			<li>HTML &amp; CSS / SASS</li>
-			<li>JavaScript</li>
-			<li>PHP &amp; WordPress</li>
-			<li>Docker &amp; MySQL</li>
-			<li>Git &amp; NPM</li>
-		</ul>
+		<div class="about-panel">
+			<p>Ik bouw al jaren eigen projecten — van browsergames tot AI-tools voor contentmakers. Daardoor ben ik gewend om zelf uit te zoeken hoe iets werkt en het af te maken. Voor mijn stage wil ik dat omzetten in professioneel teamwerk: nette code, versiebeheer met Git en werken in een Docker-omgeving.</p>
+			<ul class="skills">
+				<li>HTML &amp; CSS / SASS</li>
+				<li>JavaScript</li>
+				<li>PHP &amp; WordPress</li>
+				<li>Docker &amp; MySQL</li>
+				<li>Git &amp; NPM</li>
+			</ul>
+		</div>
 	</div>
 </section>
 

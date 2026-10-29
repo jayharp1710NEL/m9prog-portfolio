@@ -119,3 +119,6 @@ Vertaal het ontwerp naar een responsive portfolio met eigen typografie en kleure
 - Herbruikbare onderdelen: `template-parts/hero.php`, `template-parts/project-card.php`
   (met `$args` via `get_template_part`), `template-parts/navigation.php`.
 - Mobile-first navigatie met toegankelijke hamburger-toggle (`aria-expanded`, JS open/dicht).
+- Aanvulling: echte projectlinks (Kalender, Social media, GitHub-profiel; extern = nieuw tabblad),
+  'Over mij' als accent-kaart (`.about-panel`) en opvallender CTA-knoppen (gloed).
+- `wp-admin-checklist.md` toegevoegd met de handmatige WordPress-stappen voor les 3/4/6/7.
