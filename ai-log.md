@@ -104,3 +104,33 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 ## Nog handmatig in de browser (les 5)
 - Open `localhost` en bevestig visueel: de achtergrond ziet er anders uit (gelaagde gradient) en
   de pagina rendert normaal met de gecompileerde Bootstrap + eigen stijlen.
+
+---
+
+# ai-log.md – Les 6
+
+## Begrepen vs. te controleren
+- Begrijp ik: waarom een nonce nodig is (CSRF), sanitizing vs. escaping, een honeypot tegen spam,
+  en hoe `page-{slug}.php` automatisch de contactpagina pakt.
+- Later controleren: of `wp_mail` in de lokale Docker echt mail verstuurt (zie onder); evt. een
+  bevestigingsmail naar de afzender toevoegen.
+
+## Veiligheid & toegankelijkheid
+- Beveiliging: nonce-controle, honeypot-veld, en alle input wordt gesanitized vóór gebruik;
+  uitvoer wordt ge-escaped (`esc_html`/`esc_attr`/`esc_textarea`).
+- Toegankelijkheid: elk veld heeft een gekoppeld `label`, verplichte velden hebben `aria-required`;
+  bij een fout `aria-invalid` + `aria-describedby` naar de foutmelding, een foutsamenvatting met
+  `role="alert"` (krijgt focus via JS), en een succesmelding met `role="status"`.
+- Privacy: e-mailadres versleuteld met `antispambot()`; geen telefoonnummer of adres gepubliceerd.
+
+## Test
+- Getest: formulier leeg versturen, ongeldig e-mailadres, en een correcte invulling.
+- Verwacht: lege/ongeldige velden geven zichtbare, voorgelezen foutmeldingen en behouden de ingevulde
+  waarden; een correcte invulling toont de succesmelding.
+- Werkelijk: validatie en foutmeldingen werken; build exit 0; `.contact-form` in `dist/css/main.css`.
+- Let op: in de lokale Docker verstuurt `wp_mail` standaard geen echte e-mail (geen SMTP). De
+  validatie/toegankelijkheid is wél te testen; voor echte verzending kan later MailHog/SMTP erbij.
+
+## Nog handmatig in wp-admin (les 6)
+- Maak een pagina met de slug **contact** (titel "Contact"); daardoor pakt WordPress automatisch
+  `page-contact.php`. Zet die eventueel in het hoofdmenu.

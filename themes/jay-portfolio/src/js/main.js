@@ -8,6 +8,12 @@ import 'bootstrap';
 (function () {
 	'use strict';
 
+	// Toegankelijkheid (les 6): zet focus op de foutmelding van het contactformulier.
+	var contactErrors = document.getElementById( 'contact-errors' );
+	if ( contactErrors ) {
+		contactErrors.focus();
+	}
+
 	// Soepel scrollen naar in-page ankers (#projecten, #over, #contact).
 	document.querySelectorAll( 'a[href^="#"]' ).forEach( function ( link ) {
 		link.addEventListener( 'click', function ( event ) {

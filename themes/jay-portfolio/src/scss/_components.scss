@@ -86,6 +86,55 @@
 	&__title { margin: 0 0 0.5rem; font-size: 1.3rem; }
 }
 
+// Contactformulier (les 6): Bootstrap-velden passend gemaakt voor het dark-theme.
+.contact-form {
+	max-width: 560px;
+
+	// Honeypot verbergen voor echte bezoekers (bots zien en vullen het wél).
+	&__hp {
+		position: absolute;
+		left: -9999px;
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+	}
+
+	.form-control {
+		background: $surface;
+		border: 1px solid $border;
+		color: $text;
+
+		&::placeholder { color: $muted; }
+
+		&:focus {
+			background: $surface;
+			color: $text;
+			border-color: $accent;
+			box-shadow: 0 0 0 0.2rem $accent-soft;
+		}
+	}
+}
+
+.req { color: $accent; }
+
+.form-optional {
+	color: $muted;
+	font-weight: 400;
+	font-size: 0.85em;
+}
+
+.form-note {
+	color: $muted;
+	font-size: 0.85rem;
+	margin: 0 0 1.2rem;
+}
+
+.contact-alt {
+	margin-top: 2rem;
+	color: $muted;
+	font-size: 0.95rem;
+}
+
 // Uitgelichte afbeelding (les 4): featured image in de Loop.
 .page-thumb {
 	margin: 1.5rem 0;

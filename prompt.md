@@ -75,3 +75,26 @@ Zet een reproduceerbare front-end build op met Webpack dat Bootstrap en eigen Sa
   (`$font-family-sans-serif`, `$headings-font-family`) én spacing (`$spacer`).
 - Nieuwe achtergrond: gelaagde radial-gradient op `body`.
 - `functions.php`: enqueue nu `dist/css/main.css` en `dist/js/main.js`; oude `assets/` verwijderd.
+
+---
+
+# prompt.md – Les 6
+
+## Prompt
+Maak een toegankelijke contactmogelijkheid voor potentiële stagebedrijven:
+- Contactpagina met duidelijke labels, verplichte velden en toegankelijke foutmeldingen.
+- Kies een passende oplossing: betrouwbare plugin of een eigen, veilige implementatie.
+- Voeg privacyvriendelijke contactinformatie toe; publiceer geen onnodige persoonsgegevens.
+
+## Keuze
+Eigen veilige implementatie in het theme (geen plugin), zodat het echt eigen werk is en in Git staat.
+
+## Output
+- `inc/contact-form.php`: `jayportfolio_handle_contact_form()` met nonce-controle (CSRF),
+  honeypot-check, sanitizing (`sanitize_text_field`/`sanitize_email`/`sanitize_textarea_field`),
+  validatie van verplichte velden en verzending via `wp_mail` (met `Reply-To`).
+- `page-contact.php`: contactpagina (slug "contact") met Bootstrap-formulier. Velden: Naam*, E-mail*,
+  Bedrijf (optioneel), Bericht*. Toegankelijk: `label for`, `aria-required`, `aria-invalid`,
+  `aria-describedby`, foutsamenvatting met `role="alert"`, succesmelding met `role="status"`.
+- Privacyvriendelijk: e-mailadres via `antispambot()` versleuteld; geen telefoon/adres gepubliceerd.
+- SCSS `.contact-form` (dark-theme velden) + JS die focus op de foutmelding zet → gecompileerd naar `dist/`.

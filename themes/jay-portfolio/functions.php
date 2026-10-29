@@ -9,6 +9,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Directe toegang blokkeren.
 }
 
+// Veilige verwerking van het contactformulier (les 6).
+require_once get_theme_file_path( 'inc/contact-form.php' );
+
 /**
  * Theme-ondersteuning registreren.
  */
