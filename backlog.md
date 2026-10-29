@@ -10,6 +10,7 @@ Prioriteit: **P1** = eerst, **P2** = daarna, **P3** = als er tijd is.
 | 4 | P2 | Afronding | Toegankelijkheid + kleurcontrast controleren (WCAG AA) op het cyaan/violet palet. | Contrast voldoet; keyboard- en screenreader-check gedaan. |
 | 5 | P2 | Afronding | SEO-basics: paginatitels, meta-description, Open Graph en een favicon. | Nette previews bij delen; titels kloppen. |
 | 6 | P2 | Beheer | Back-up/export van database en uploads instellen. | Er is een herstelbare back-up. |
+| 9 | P1 | Beheer | Persistent volume voor de `mariadb`-service toevoegen (nu geen volume → risico op dataverlies). | DB overleeft het opnieuw opbouwen van containers. |
 | 7 | P3 | Afronding | Performance: Bootstrap-bundle verkleinen (alleen gebruikte componenten) en afbeeldingen optimaliseren. | Kleinere `dist/`, snellere laadtijd. |
 | 8 | P3 | Livegang | Domeinnaam koppelen + HTTPS. | Eigen domein met geldig SSL. |
 

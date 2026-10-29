@@ -1,5 +1,21 @@
 # Secrets / lokale omgeving
 .env
+.env.*
+!.env.example
+
+# Privésleutels, certificaten en SSH-config (nooit in de repo)
+*.pem
+*.key
+*.ppk
+*.p12
+id_rsa
+id_rsa.*
+id_ed25519
+id_ed25519.*
+*.crt
+.ssh/
+secrets/
+*credentials*
 
 # Node
 node_modules/

@@ -9,10 +9,30 @@ services:
       WORDPRESS_DB_USER: "${DB_USERNAME}"
       WORDPRESS_DB_PASSWORD: "${DB_PASSWORD}"
     volumes:
+      - wordpress_core:/var/www/html
       - ./themes:/var/www/html/wp-content/themes
       - ./plugins:/var/www/html/wp-content/plugins
       - ./uploads:/var/www/html/wp-content/uploads
     depends_on:
+      - mariadb
+
+  # WP-CLI (les 10): deelt de WordPress-core met de wordpress-service.
+  # Gebruik (eenmalige commando's):  docker compose run --rm wpcli wp core version
+  wpcli:
+    image: wordpress:cli
+    user: "33:33" # www-data, zodat bestandsrechten kloppen
+    environment:
+      WORDPRESS_DB_HOST: "${DB_HOST}"
+      WORDPRESS_DB_NAME: "${DB_NAME}"
+      WORDPRESS_DB_USER: "${DB_USERNAME}"
+      WORDPRESS_DB_PASSWORD: "${DB_PASSWORD}"
+    volumes:
+      - wordpress_core:/var/www/html
+      - ./themes:/var/www/html/wp-content/themes
+      - ./plugins:/var/www/html/wp-content/plugins
+      - ./uploads:/var/www/html/wp-content/uploads
+    depends_on:
+      - wordpress
       - mariadb
 
   mariadb:
@@ -35,3 +55,6 @@ services:
       - "1089:80"
     depends_on:
       - mariadb
+
+volumes:
+  wordpress_core:

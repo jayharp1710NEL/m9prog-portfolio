@@ -203,3 +203,25 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 ## Nog zelf doen (les 9)
 - Lokaal demonstreren: home, over mij, contact, projectoverzicht en één projectdetail.
 - Feedback verzamelen (inhoud/vormgeving/techniek/planning) en invullen in `tussenbeoordeling.md` §6.
+
+---
+
+# ai-log.md – Les 10 (WP-CLI & SSH)
+
+## Begrepen vs. te controleren
+- Begrijp ik: verschil lokale terminal / SSH / wp-admin; WP-CLI draaien via een `wpcli`-container;
+  waarom `search-replace` eerst met `--dry-run` moet.
+- Nog te doen: het `docker compose up -d` uitvoeren en de read-only commando's draaien (Docker stond uit
+  tijdens het bouwen, dus niet lokaal kunnen testen).
+
+## Wat ik heb gemaakt
+- `wp-cli-ssh.md`: uitleg + veilige commando's (`wp core version`, `wp plugin list`, `wp theme list`,
+  `wp user list`) en de `search-replace --dry-run`-uitleg.
+- `docker-compose.yml`: `wpcli`-service (image `wordpress:cli`) + gedeeld `wordpress_core`-volume.
+  mariadb bewust ongewijzigd gelaten (heeft geen volume → anders dataverlies-risico).
+- `.gitignore` uitgebreid met privésleutels/certificaten (`*.pem`, `*.key`, `id_rsa`, `.ssh/`, …).
+
+## Test
+- Code/config klaar; build niet nodig. Lokaal uitvoeren zodra Docker draait:
+  `docker compose up -d` → `docker compose run --rm wpcli wp core version`.
+- Veiligheid: `search-replace` alleen met `--dry-run` oefenen; geen geheimen in de repo.
