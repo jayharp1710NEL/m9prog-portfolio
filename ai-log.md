@@ -190,3 +190,16 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 ## Nog handmatig in wp-admin (les 8)
 - Permalinks opslaan (verversen), daarna minimaal 3 projecten aanmaken met titel, intro,
   toelichting, uitgelichte afbeelding en technologieën. Stappen staan in `wp-admin-checklist.md`.
+
+---
+
+# ai-log.md – Les 9 (tussenbeoordeling)
+
+## Opgeleverd
+- `tussenbeoordeling.md`: status per pagina, theme-structuur, Webpack-build, git-geschiedenis,
+  en de uitleg van één AI-resultaat dat ik zelf aanpaste (hardcoded kaarten → Custom Post Type).
+- `backlog.md`: 8 geprioriteerde taken (P1–P3) voor beheer, livegang en afronding (min. 5 vereist).
+
+## Nog zelf doen (les 9)
+- Lokaal demonstreren: home, over mij, contact, projectoverzicht en één projectdetail.
+- Feedback verzamelen (inhoud/vormgeving/techniek/planning) en invullen in `tussenbeoordeling.md` §6.
