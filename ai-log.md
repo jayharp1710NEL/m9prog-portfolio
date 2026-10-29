@@ -225,3 +225,21 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 - Code/config klaar; build niet nodig. Lokaal uitvoeren zodra Docker draait:
   `docker compose up -d` → `docker compose run --rm wpcli wp core version`.
 - Veiligheid: `search-replace` alleen met `--dry-run` oefenen; geen geheimen in de repo.
+
+---
+
+# ai-log.md – Les 11 (hosting voorbereiden)
+
+## Keuze
+Hostingomgeving: **Media College webhosting** (gedeelde hosting → deploy via SFTP + phpMyAdmin).
+
+## Wat ik heb gemaakt
+- `README.md`: projectuitleg, lokaal draaien, en een duidelijk **"Nooit committen"**-gedeelte
+  (`.env`, wachtwoorden, SFTP/SSH-gegevens, privésleutels, `node_modules/`, `*.sql`, uploads).
+- `.env.example`: veilige placeholders; `.env` zelf blijft genegeerd (gecontroleerd met `git check-ignore`).
+- `deployment-checklist.md`: gegevens verzamelen → productie controleren → **back-up** →
+  theme/uploads/database verplaatsen → na-deploy-checks → **terugvaloptie (rollback)**.
+
+## Nog zelf doen (les 11)
+- Echte hostinggegevens van school ophalen en invullen in `deployment-checklist.md` (buiten de repo houden).
+- Productie-database + WordPress-installatie op de hosting controleren/aanmaken.
