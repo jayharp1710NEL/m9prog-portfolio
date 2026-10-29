@@ -122,3 +122,21 @@ Vertaal het ontwerp naar een responsive portfolio met eigen typografie en kleure
 - Aanvulling: echte projectlinks (Kalender, Social media, GitHub-profiel; extern = nieuw tabblad),
   'Over mij' als accent-kaart (`.about-panel`) en opvallender CTA-knoppen (gloed).
 - `wp-admin-checklist.md` toegevoegd met de handmatige WordPress-stappen voor les 3/4/6/7.
+
+---
+
+# prompt.md – Les 8
+
+## Prompt
+Registreer een Custom Post Type "project" met labels, REST, uitgelichte afbeelding en archief;
+bouw archive-project.php en single-project.php; test de permalinks.
+
+## Output
+- `inc/post-types.php`: CPT `project` (`public`, `has_archive`, `show_in_rest`, thumbnail-support,
+  slug `projecten`, dashicon) + taxonomie `technologie` voor de gebruikte technieken; permalinks
+  worden ververst bij theme-activatie (`after_switch_theme`).
+- `template-parts/project-card-cpt.php`: herbruikbare kaart die een CPT-project toont.
+- `archive-project.php`: overzicht van alle projecten (grid + paginering).
+- `single-project.php`: detailpagina met titel, technieken, uitgelichte afbeelding en toelichting.
+- `front-page.php`: homepage haalt projecten nu dynamisch uit de CPT (met terugval op de handmatige
+  kaarten) en toont een knop "Alle projecten" naar het archief.

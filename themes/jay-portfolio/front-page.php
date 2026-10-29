@@ -50,10 +50,38 @@ get_template_part( 'template-parts/hero' );
 		</header>
 
 		<div class="project-grid">
-			<?php foreach ( $projects as $project ) : ?>
-				<?php get_template_part( 'template-parts/project-card', null, $project ); ?>
-			<?php endforeach; ?>
+			<?php
+			// Les 8: projecten uit het Custom Post Type halen.
+			$project_query = new WP_Query(
+				array(
+					'post_type'      => 'project',
+					'posts_per_page' => 3,
+					'no_found_rows'  => true,
+				)
+			);
+
+			if ( $project_query->have_posts() ) :
+				while ( $project_query->have_posts() ) :
+					$project_query->the_post();
+					get_template_part( 'template-parts/project-card-cpt' );
+				endwhile;
+				wp_reset_postdata();
+			else :
+				// Terugval: handmatige kaarten zolang er nog geen projecten zijn aangemaakt.
+				foreach ( $projects as $project ) :
+					get_template_part( 'template-parts/project-card', null, $project );
+				endforeach;
+			endif;
+			?>
 		</div>
+
+		<?php if ( $project_query->post_count > 0 && get_post_type_archive_link( 'project' ) ) : ?>
+			<p class="projects-more">
+				<a class="btn btn--ghost" href="<?php echo esc_url( get_post_type_archive_link( 'project' ) ); ?>">
+					<?php esc_html_e( 'Alle projecten', 'jay-portfolio' ); ?>
+				</a>
+			</p>
+		<?php endif; ?>
 	</div>
 </section>
 

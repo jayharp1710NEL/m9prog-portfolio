@@ -167,3 +167,26 @@ Zonder deze support is dat paneel verborgen en doet `the_post_thumbnail()` niets
 ## Nog handmatig in de browser (les 7)
 - Controleer op echte apparaten/DevTools de breakpoints en vul hierboven de echte
   medestudent-feedback in.
+
+---
+
+# ai-log.md – Les 8
+
+## Begrepen vs. te controleren
+- Begrijp ik: een Custom Post Type registreren op `init`, waarom `show_in_rest` nodig is (blok-editor
+  + API), `has_archive` → `archive-project.php`, en de templatehiërarchie `single-{posttype}.php`.
+- Belangrijk: na het registreren moeten de **permalinks ververst** worden, anders 404 op `/projecten/`.
+
+## Wat ik heb gebouwd
+- CPT `project` + taxonomie `technologie` (gebruikte technieken), beide met NL-labels en REST-support.
+- Archief- en detailtemplate; een herbruikbare CPT-kaart; homepage haalt projecten nu uit de CPT.
+
+## Test
+- Getest (code): build exit 0; nieuwe templates en CPT-registratie staan klaar.
+- Verwacht: na "Instellingen → Permalinks → opslaan" werkt `/projecten/` (archief) en
+  `/projecten/<naam>/` (detail); homepage toont de CPT-projecten.
+- Werkelijk: in de browser te bevestigen nadat de 3 projecten zijn aangemaakt (zie checklist).
+
+## Nog handmatig in wp-admin (les 8)
+- Permalinks opslaan (verversen), daarna minimaal 3 projecten aanmaken met titel, intro,
+  toelichting, uitgelichte afbeelding en technologieën. Stappen staan in `wp-admin-checklist.md`.

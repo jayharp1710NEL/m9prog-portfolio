@@ -12,6 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 // Veilige verwerking van het contactformulier (les 6).
 require_once get_theme_file_path( 'inc/contact-form.php' );
 
+// Custom Post Type "project" en taxonomie "technologie" (les 8).
+require_once get_theme_file_path( 'inc/post-types.php' );
+
 /**
  * Theme-ondersteuning registreren.
  */

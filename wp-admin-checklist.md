@@ -34,5 +34,19 @@ Ze horen bij de lessen en kunnen niet in code; het theme is verder klaar.
 - [ ] Test op `localhost` met een smal venster (of DevTools): verschijnt het **hamburger-menu**
       en klapt het netjes open/dicht?
 
+## Les 8 — Custom Post Type "project"
+- [ ] **Belangrijk eerst:** ga naar **Instellingen → Permalinks** en klik **Wijzigingen opslaan**
+      (dit "ververst" de permalinks zodat de projectpagina's werken). Nodig na het toevoegen van de CPT.
+- [ ] Links in het menu zie je nu **Projecten** staan. Maak **minimaal 3 projecten**:
+  - [ ] **Projecten → Nieuw project**: vul **titel**, een korte **intro** (veld "Samenvatting"/excerpt),
+        de **toelichting** (hoofdtekst), en zet een **Uitgelichte afbeelding**.
+  - [ ] Voeg bij **Technologieën** de gebruikte technieken toe (bv. PHP, JavaScript, Docker).
+  - [ ] Publiceren. Herhaal tot je er 3 hebt.
+- [ ] Test de **permalink**: open een project → de URL is `/projecten/<naam>/` en de detailpagina
+      toont badge **"Template: single-project.php"**.
+- [ ] Open **`/projecten/`** (het archief) → badge **"Template: archive-project.php"** en je ziet de kaarten.
+- [ ] Open de homepage → de projectkaarten komen nu automatisch uit je 3 projecten.
+
 ## Tip
 Na codewijzigingen een **harde refresh** doen (`Ctrl + F5`) zodat je niet de oude CSS uit de cache ziet.
+Zie je een 404 op `/projecten/`? Dan heb je de permalinks nog niet opgeslagen (eerste stap hierboven).

@@ -30,8 +30,18 @@
 		&--3 { background: linear-gradient(135deg, #0ea5e9, #a855f7); }
 	}
 
+	// Uitgelichte afbeelding van een CPT-project (les 8).
+	&__thumb-img {
+		display: block;
+		img { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; }
+	}
+
 	&__body { padding: 1.25rem 1.3rem 1.4rem; display: flex; flex-direction: column; gap: 0.6rem; flex: 1; }
-	&__title { font-size: 1.2rem; margin: 0; }
+	&__title {
+		font-size: 1.2rem;
+		margin: 0;
+		a { color: $text; &:hover { color: $accent; } }
+	}
 	&__desc { color: $muted; font-size: 0.95rem; margin: 0; flex: 1; }
 	&__link { font-family: $font-head; font-weight: 600; font-size: 0.92rem; }
 }
@@ -84,6 +94,12 @@
 	padding: 1.4rem 1.5rem;
 
 	&__title { margin: 0 0 0.5rem; font-size: 1.3rem; }
+}
+
+// "Alle projecten"-knop onder het projectgrid (les 8).
+.projects-more {
+	margin-top: $space-4;
+	text-align: center;
 }
 
 // 'Over mij'-paneel (les 7-feedback): inhoud in een accent-kaart.
